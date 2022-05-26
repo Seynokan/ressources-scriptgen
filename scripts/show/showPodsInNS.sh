@@ -3,6 +3,10 @@
 
 alias kubectl="minikube kubectl --";
 
-nbns=$1
+for var in "$@";
+do
+
+nbns=$var
 
 kubectl get pods -n team$nbns
+done
